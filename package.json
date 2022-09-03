@@ -1,4 +1,3 @@
-
 {
   "name": "@hexlet/code",
   "version": "1.0.0",
@@ -7,7 +6,6 @@
     "brain-games": "bin/brain-games.js"
   },
   "main": "index.js",
-  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,6 +19,8 @@
     "url": "https://github.com/Zhitik13/backend-project-44/issues"
   },
   "type": "module",
-  "homepage": "https://github.com/Zhitik13/backend-project-44#readme"
+  "homepage": "https://github.com/Zhitik13/backend-project-44#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
 }
-
