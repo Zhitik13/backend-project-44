@@ -19,7 +19,7 @@ const isPrime = (number) => {
   return true;
 };
 
-export const roundGenerator = () => {
+export const generatePuzzle = () => {
   const number = randomNumber(minNumber, maxNumber);
   const answer = isPrime(number) ? "yes" : "no";
   const question = String(number);
@@ -27,7 +27,7 @@ export const roundGenerator = () => {
 };
 
 const start = () => {
-  run(discription, roundGenerator);
+  run(discription, generatePuzzle);
 };
 
 export default start;
