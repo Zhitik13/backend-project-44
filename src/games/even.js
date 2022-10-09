@@ -6,17 +6,17 @@ const maxNumber = 200;
 const discription =
   'Answer "yes" if the number is even, otherwise answer "no".';
 
-const remainder = (number) => number % 2 === 0;
+const isEven = (number) => number % 2 === 0;
 
-export const generateNumber = () => {
+export const generatePuzzle = () => {
   const number = randomNumber(minNumber, maxNumber);
-  const answer = remainder(number) ? "yes" : "no";
+  const answer = isEven(number) ? "yes" : "no";
   const question = String(number);
   return { answer, question };
 };
 
 const start = () => {
-  run(discription, generateNumber);
+  run(discription, generatePuzzle);
 };
 
 export default start;
