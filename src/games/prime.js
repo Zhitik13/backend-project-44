@@ -6,7 +6,7 @@ const maxNumber = 50;
 const discription =
   'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const IsPrime = (number) => {
+const isPrime = (number) => {
   if (number <= 1) {
     return false;
   }
@@ -19,15 +19,15 @@ const IsPrime = (number) => {
   return true;
 };
 
-export const generateNumber = () => {
+export const roundGenerator = () => {
   const number = randomNumber(minNumber, maxNumber);
-  const answer = IsPrime(number) ? "yes" : "no";
+  const answer = isPrime(number) ? "yes" : "no";
   const question = String(number);
   return { answer, question };
 };
 
 const start = () => {
-  run(discription, generateNumber);
+  run(discription, roundGenerator);
 };
 
 export default start;
