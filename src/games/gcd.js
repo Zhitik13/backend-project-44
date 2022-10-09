@@ -5,18 +5,19 @@ const minNumber = 1;
 const maxNumber = 200;
 const discription = "Find the greatest common divisor of given numbers.";
 
-const greatestDivisor = (x, y) => (y === 0 ? x : greatestDivisor(y, x % y));
+const findGreatestDivisor = (x, y) =>
+  y === 0 ? x : findGreatestDivisor(y, x % y);
 
-export const generateNumber = () => {
+export const generatePuzzle = () => {
   const number1 = randomNumber(minNumber, maxNumber);
   const number2 = randomNumber(minNumber, maxNumber);
-  const answer = greatestDivisor(number1, number2).toString();
+  const answer = findGreatestDivisor(number1, number2).toString();
   const question = `${number1} ${number2}`;
   return { answer, question };
 };
 
 const start = () => {
-  run(discription, generateNumber);
+  run(discription, generatePuzzle);
 };
 
 export default start;
