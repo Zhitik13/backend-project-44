@@ -1,4 +1,4 @@
-import { randomNumber, randomIndex } from "../utilits.js";
+import { randomNumber } from "../utilits.js";
 import run from "../index.js";
 
 const minNumber = 1;
@@ -19,8 +19,8 @@ const calculate = (x, y, operation) => {
   }
 };
 
-export const generateNumber = () => {
-  const operation = operations[randomIndex(operations)];
+export const generatePuzzle = () => {
+  const operation = operations[randomNumber(0, operations.length)];
   const number1 = randomNumber(minNumber, maxNumber);
   const number2 = randomNumber(minNumber, maxNumber);
   const answer = calculate(number1, number2, operation).toString();
@@ -29,7 +29,7 @@ export const generateNumber = () => {
 };
 
 const start = () => {
-  run(discription, generateNumber);
+  run(discription, generatePuzzle);
 };
 
 export default start;
