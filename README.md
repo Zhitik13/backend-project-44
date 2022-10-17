@@ -82,4 +82,4 @@ Definition of a prime number.
 
 # RAM
 
-• mim 4GB
+• min 4GB
