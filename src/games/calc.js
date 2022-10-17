@@ -1,25 +1,25 @@
-import { randomNumber } from "../utilits.js";
-import run from "../index.js";
+import { randomNumber } from '../utilits.js';
+import run from '../index.js';
 
 const minNumber = 1;
 const maxNumber = 200;
-const operations = ["+", "-", "*"];
-const discription = "What is the result of the expression?";
+const operations = ['+', '-', '*'];
+const discription = 'What is the result of the expression?';
 
 const calculate = (x, y, operation) => {
   switch (operation) {
-    case "-":
+    case '-':
       return x - y;
-    case "+":
+    case '+':
       return x + y;
-    case "*":
+    case '*':
       return x * y;
     default:
       return null;
   }
 };
 
-export const generatePuzzle = () => {
+export const getGameData = () => {
   const operation = operations[randomNumber(0, operations.length)];
   const number1 = randomNumber(minNumber, maxNumber);
   const number2 = randomNumber(minNumber, maxNumber);
@@ -29,7 +29,7 @@ export const generatePuzzle = () => {
 };
 
 const start = () => {
-  run(discription, generatePuzzle);
+  run(discription, getGameData);
 };
 
 export default start;
