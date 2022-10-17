@@ -4,7 +4,7 @@ import run from '../index.js';
 const minNumber = 1;
 const maxNumber = 200;
 const discription =
-  ' Answer "yes" if the number is even, otherwise answer "no".';
+  'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (number) => number % 2 === 0;
 
