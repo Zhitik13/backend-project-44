@@ -1,5 +1,5 @@
-import { randomNumber } from "../utilits.js";
-import run from "../index.js";
+import { randomNumber } from '../utilits.js';
+import run from '../index.js';
 
 const minNumber = 1;
 const maxNumber = 50;
@@ -19,15 +19,15 @@ const isPrime = (number) => {
   return true;
 };
 
-export const generatePuzzle = () => {
+export const getGameData = () => {
   const number = randomNumber(minNumber, maxNumber);
-  const answer = isPrime(number) ? "yes" : "no";
+  const answer = isPrime(number) ? 'yes' : 'no';
   const question = String(number);
   return { answer, question };
 };
 
 const start = () => {
-  run(discription, generatePuzzle);
+  run(discription, getGameData);
 };
 
 export default start;
