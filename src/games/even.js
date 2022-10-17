@@ -8,7 +8,7 @@ const discription =
 
 const isEven = (number) => number % 2 === 0;
 
-export const generatePgetGameDatauzzle = () => {
+export const getGameData = () => {
   const number = randomNumber(minNumber, maxNumber);
   const answer = isEven(number) ? 'yes' : 'no';
   const question = String(number);
