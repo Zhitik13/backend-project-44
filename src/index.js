@@ -1,17 +1,17 @@
-import readlineSync from "readline-sync";
+import readlineSync from 'readline-sync';
 
 const totalRounds = 3;
 
 const run = (discription, generatePuzzle) => {
-  console.log("Welcome to the Brain Games!");
-  const userName = readlineSync.question("May I have your name? ");
+  console.log('Welcome to the Brain Games!');
+  const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   console.log(`${discription}`);
 
   for (let i = 0; i < totalRounds; i += 1) {
     const { answer, question } = generatePuzzle();
     console.log(`Question: ${question}`);
-    const reply = readlineSync.question("Your answer: ");
+    const reply = readlineSync.question('Your answer: ');
 
     if (answer !== reply.toLowerCase()) {
       console.log(
@@ -20,7 +20,7 @@ const run = (discription, generatePuzzle) => {
       console.log(`Let's try again, ${userName}!`);
       return;
     }
-    console.log("Current!");
+    console.log('Current!');
   }
   console.log(`Congratulations, ${userName}`);
 };
