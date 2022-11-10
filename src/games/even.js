@@ -1,4 +1,4 @@
-import { randomNumber } from '../utilits.js';
+import randomNumber from '../utilits.js';
 import run from '../index.js';
 
 const minNumber = 1;
