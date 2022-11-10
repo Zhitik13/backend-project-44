@@ -9,7 +9,7 @@ const run = (discription, getGameData) => {
   console.log(`${discription}`);
 
   for (let i = 0; i < totalRounds; i += 1) {
-    const { answer, question } = getGameData();
+    const [answer, question] = getGameData();
     console.log(`Question: ${question}`);
     const reply = readlineSync.question('Your answer: ');
 
@@ -22,7 +22,7 @@ const run = (discription, getGameData) => {
     }
     console.log('Current!');
   }
-  console.log(`Congratulations, ${userName}`);
+  console.log(`Congratulations, ${userName}!`);
 };
 
 export default run;

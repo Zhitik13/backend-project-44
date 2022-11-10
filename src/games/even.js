@@ -12,7 +12,7 @@ export const getGameData = () => {
   const number = randomNumber(minNumber, maxNumber);
   const answer = isEven(number) ? 'yes' : 'no';
   const question = String(number);
-  return { answer, question };
+  return [answer, question];
 };
 
 const start = () => {

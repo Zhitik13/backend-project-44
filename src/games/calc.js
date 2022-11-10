@@ -1,4 +1,4 @@
-import { randomNumber } from '../utilits.js';
+import randomNumber from '../utilits.js';
 import run from '../index.js';
 
 const minNumber = 1;
@@ -25,7 +25,7 @@ export const getGameData = () => {
   const number2 = randomNumber(minNumber, maxNumber);
   const answer = calculate(number1, number2, operation).toString();
   const question = `${number1}${operation}${number2}`;
-  return { answer, question };
+  return [answer, question];
 };
 
 const start = () => {

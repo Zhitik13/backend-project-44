@@ -1,4 +1,4 @@
-import { randomNumber } from '../utilits.js';
+import randomNumber from '../utilits.js';
 import run from '../index.js';
 
 const minNumber = 1;
@@ -23,7 +23,7 @@ export const getGameData = () => {
   const number = randomNumber(minNumber, maxNumber);
   const answer = isPrime(number) ? 'yes' : 'no';
   const question = String(number);
-  return { answer, question };
+  return [answer, question];
 };
 
 const start = () => {

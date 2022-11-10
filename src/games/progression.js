@@ -1,4 +1,4 @@
-import { randomNumber } from '../utilits.js';
+import randomNumber from '../utilits.js';
 import run from '../index.js';
 
 const minLength = 2;
@@ -27,7 +27,7 @@ export const getGameData = () => {
   const answer = progression[indexNumber].toString();
   progression[indexNumber] = '..';
   const question = String(progression.join(' '));
-  return { answer, question };
+  return [answer, question];
 };
 
 const start = () => {
