@@ -26,7 +26,6 @@
   "type": "module",
   "homepage": "https://github.com/Zhitik13/backend-project-44#readme",
   "dependencies": {
-    "brain-even": "^0.1.12",
     "eslint-plugin-jest": "^27.0.1",
     "readline-sync": "^1.4.10"
   },
